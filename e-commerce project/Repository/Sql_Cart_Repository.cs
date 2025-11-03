@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using e_commerce_project.DTOs;
+using e_commerce_project.DTOs.Cart;
 using e_commerce_project.Modles;
 using e_commerce_project.Services;
 using Microsoft.EntityFrameworkCore;
@@ -20,84 +21,61 @@ namespace e_commerce_project.Repository
 
         public async Task<CartDTO> GetCart(string UserId)
         {
-
             var cart = await context.Carts
-            .Include(c => c.Cart_item)
-                .ThenInclude(ci => ci.Product)
-                    .ThenInclude(p => p.Product_Skus)
-            .FirstOrDefaultAsync(c => c.UserId == UserId);
+                .Include(c => c.Cart_item)
+                  .ThenInclude(ci => ci.Sku)
+                    .ThenInclude(s => s.Product)
+                .FirstOrDefaultAsync(c => c.UserId == UserId);
 
-            if (cart == null || cart.Cart_item == null)
+            if (cart == null)
             {
-                return new CartDTO
+                 cart = new Cart
                 {
-                    Items = new List<CartItemDTO>(),
+                    UserId = UserId,
                     Total = 0
                 };
-            }
-
-            var cartItems = mapper.Map<List<CartItemDTO>>(cart.Cart_item);
-            var total = cartItems.Sum(i => i.Subtotal);
-
-            return new CartDTO
-            {
-                Items = cartItems,
-                Total = total
-            };
-
-        }
-        //Repair
-        /*public async Task<CartDTO> AddToCart(AddCartItemDTO item, string UserId)
-        {
-             var user = await context.Users
-                         .Include(u => u.Cart)
-                         .ThenInclude(c => c.Cart_item)
-                         .ThenInclude(ci => ci.Product)
-                         .ThenInclude(p => p.Product_Skus)
-                         .FirstOrDefaultAsync(u => u.Id == UserId);
-
-            var existingItem = user.Cart.Cart_item.FirstOrDefault(ci => ci.Product_Id == item.Product_Id);
-            if (existingItem != null)
-            {
-                existingItem.Quantity += item.Quantity;
-            }
-            else
-            {
-                var newItem = new Cart_item
-                {
-                    Product_Id = item.Product_Id,
-                    Quantity = item.Quantity,
-                    Cart = user.Cart
-                };
-                user.Cart.Cart_item.Add(newItem);
-            }
-            
-            var cartItems = mapper.Map<List<CartItemDTO>>(user.Cart.Cart_item);
-            var total = cartItems.Sum(i => i.Subtotal);
-            await context.SaveChangesAsync();
-
-            return new CartDTO
-            {
-                Items = cartItems,
-                Total = total
-            };
-
-        }*/
-        /*public async Task<CartDTO> AddItemToCartAsync(AddCartItemDTO item,string userId)
-        {
-            var userCart = await context.Carts
-                .Include(c => c.Cart_item)
-                .ThenInclude(ci => ci.Product)
-                .FirstOrDefaultAsync(c => c.UserId == userId);
-
-            if (userCart == null)
-            {
-                userCart = new Cart { UserId = userId };
-                context.Carts.Add(userCart);
+                await context.Carts.AddAsync(cart);
                 await context.SaveChangesAsync();
             }
 
-            var existingItem = userCart.Cart_item.FirstOrDefault(ci => ci.Product_Id == item.Product_Id);
+            return mapper.Map<CartDTO>(cart);
+
+        }
+
+        public async Task<CartDTO> AddToCart(AddCartItemDTO item, string UserId)
+        {
+            var cart = await context.Carts
+                .Include(c => c.Cart_item)
+                 .ThenInclude(ci => ci.Sku)
+                  .ThenInclude(s => s.Product)
+                .FirstOrDefaultAsync(c => c.UserId == UserId);
+
+            if (cart == null)
+            {
+                cart = new Cart
+                {
+                    UserId = UserId,
+                    Total = 0
+                };
+                await context.Carts.AddAsync(cart);
+                await context.SaveChangesAsync();
+            }
+
+            var sku = await context.product_Skus
+                    .Include(x=>x.Product)
+                    .FirstOrDefaultAsync(s => s.Id == item.Sku_Id);
+
+            if (sku == null)
+                throw new Exception("Invalid SKU Id");
+
+
+            var newitem = mapper.Map<Cart_item>(item);
+            newitem.Cart_Id = cart.CartId;
+            newitem.Sku = sku;
+
+            //handle existing item
+            var existingItem = cart.Cart_item
+                    .FirstOrDefault(ci => ci.Sku_Id == item.Sku_Id);
 
             if (existingItem != null)
             {
@@ -105,28 +83,16 @@ namespace e_commerce_project.Repository
             }
             else
             {
-                var product = await context.Products.FindAsync(item.Product_Id);
-                if (product == null)
-                    throw new Exception("Product not found");
-
-                userCart.Cart_item.Add(new Cart_item
-                {
-                    Product_Id = product.Id,
-                    Quantity = item.Quantity,
-                });
+                cart.Cart_item.Add(newitem);
             }
 
+            cart.Total = cart.Cart_item.Sum(ci => ci.Subtotal);
             await context.SaveChangesAsync();
 
-            // Reload the cart with all relationships
-            var updatedCart = await context.Carts
-                .Include(c => c.Cart_item)
-                .ThenInclude(ci => ci.Product)
-                .FirstOrDefaultAsync(c => c.UserId == userCart.UserId);
+            var result = mapper.Map<CartDTO>(cart);
+            return result;
 
-            return mapper.Map<CartDTO>(updatedCart);
-        }*/
-
+        }
         public async Task UpdateItemQuantity(int Proid, int quantity, string UserId)
         {
             throw new NotImplementedException();

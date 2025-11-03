@@ -167,3 +167,4 @@ C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\obj\Debug\net9.0\e-commerce project.sourcelink.json

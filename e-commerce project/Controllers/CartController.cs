@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using e_commerce_project.DTOs;
+using e_commerce_project.DTOs.Cart;
 using e_commerce_project.Modles;
 using e_commerce_project.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -29,7 +30,7 @@ namespace e_commerce_project.Controllers
             return Ok(cart);
         }
             
-       /* [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> AddToCart(AddCartItemDTO item)
         {
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -43,7 +44,7 @@ namespace e_commerce_project.Controllers
                 return BadRequest(new { message = ex.Message });
             }
 
-        }*/
+        }
 
         [HttpPut("{id:int}")]
         public async Task<IActionResult> UpdateItemQuantity(int id, int quantity)

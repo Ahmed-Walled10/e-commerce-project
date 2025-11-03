@@ -24,5 +24,8 @@ namespace e_commerce_project.Modles
 
         public int product_Id { get; set; }
         public virtual Products Product { get; set; }
+
+        public virtual ICollection<Cart_item> Cart_Items { get; set; } = new List<Cart_item>();
+
     }
 }

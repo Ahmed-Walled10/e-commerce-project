@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\micro\\source\\repos\\e-commerce project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\repository\\sql_cart_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\repository\\sql_cart_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\profiles\\cartprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\profiles\\cartprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\services\\icart.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\services\\icart.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -11,24 +19,8 @@
       "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\profiles\\cartprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\profiles\\cartprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\repository\\sql_cart_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\repository\\sql_cart_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\dtos\\addcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\dtos\\addcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\modles\\cart_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\modles\\cart_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\dtos\\cart\\addcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\dtos\\cart\\addcartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,92 +62,76 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\CartController.cs",
+              "RelativeToolTip": "e-commerce project\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T11:39:25.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Sql_Cart_Repository.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Cart_Repository.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Repository\\Sql_Cart_Repository.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Cart_Repository.cs",
+              "RelativeToolTip": "e-commerce project\\Repository\\Sql_Cart_Repository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwC8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T11:37:24.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartProfile.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Profiles\\CartProfile.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Profiles\\CartProfile.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Profiles\\CartProfile.cs",
+              "RelativeToolTip": "e-commerce project\\Profiles\\CartProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T20:56:16.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ICart.cs",
               "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\ICart.cs",
               "RelativeDocumentMoniker": "e-commerce project\\Services\\ICart.cs",
               "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\ICart.cs",
               "RelativeToolTip": "e-commerce project\\Services\\ICart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T13:03:19.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\CartController.cs",
-              "RelativeToolTip": "e-commerce project\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T11:39:25.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Sql_Cart_Repository.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Cart_Repository.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\Repository\\Sql_Cart_Repository.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Cart_Repository.cs",
-              "RelativeToolTip": "e-commerce project\\Repository\\Sql_Cart_Repository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T11:37:24.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartProfile.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Profiles\\CartProfile.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\Profiles\\CartProfile.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Profiles\\CartProfile.cs",
-              "RelativeToolTip": "e-commerce project\\Profiles\\CartProfile.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwA8AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T11:56:40.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Cart_item.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Modles\\Cart_item.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\Modles\\Cart_item.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Modles\\Cart_item.cs",
-              "RelativeToolTip": "e-commerce project\\Modles\\Cart_item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T11:57:01.427Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CartItemDTO.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\CartItemDTO.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\DTOs\\CartItemDTO.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\CartItemDTO.cs",
-              "RelativeToolTip": "e-commerce project\\DTOs\\CartItemDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T11:58:24.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "AddCartItemDTO.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\AddCartItemDTO.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\DTOs\\AddCartItemDTO.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\AddCartItemDTO.cs",
-              "RelativeToolTip": "e-commerce project\\DTOs\\AddCartItemDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\Cart\\AddCartItemDTO.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\DTOs\\Cart\\AddCartItemDTO.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\Cart\\AddCartItemDTO.cs",
+              "RelativeToolTip": "e-commerce project\\DTOs\\Cart\\AddCartItemDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T12:34:41.104Z"
+              "WhenOpened": "2025-11-02T22:36:44.364Z",
+              "EditorCaption": ""
             }
           ]
         }

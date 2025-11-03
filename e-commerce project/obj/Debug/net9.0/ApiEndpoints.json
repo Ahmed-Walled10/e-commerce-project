@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "e_commerce_project.Controllers.CartController",
+    "Method": "AddToCart",
+    "RelativePath": "api/v1/Cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "e_commerce_project.DTOs.Cart.AddCartItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.CartController",
     "Method": "UpdateItemQuantity",
     "RelativePath": "api/v1/Cart/{id}",
     "HttpMethod": "PUT",

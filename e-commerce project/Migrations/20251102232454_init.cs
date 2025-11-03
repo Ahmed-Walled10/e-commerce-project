@@ -225,7 +225,7 @@ namespace e_commerce_project.Migrations
                 {
                     CartId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Total = table.Column<int>(type: "int", nullable: false),
+                    Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
@@ -245,7 +245,7 @@ namespace e_commerce_project.Migrations
                 {
                     OrderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Total_Amount = table.Column<int>(type: "int", nullable: false),
+                    Total_Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Order_Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Delivery_Date = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -335,33 +335,6 @@ namespace e_commerce_project.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Cart_items",
-                columns: table => new
-                {
-                    Cart_itemId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    Cart_Id = table.Column<int>(type: "int", nullable: false),
-                    Product_Id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cart_items", x => x.Cart_itemId);
-                    table.ForeignKey(
-                        name: "FK_Cart_items_Carts_Cart_Id",
-                        column: x => x.Cart_Id,
-                        principalTable: "Carts",
-                        principalColumn: "CartId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Cart_items_Products_Product_Id",
-                        column: x => x.Product_Id,
-                        principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Order_items",
                 columns: table => new
                 {
@@ -394,7 +367,7 @@ namespace e_commerce_project.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Amount = table.Column<int>(type: "int", nullable: false),
+                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Payment_Method = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Payment_Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Payment_Date = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -433,6 +406,33 @@ namespace e_commerce_project.Migrations
                         column: x => x.Wishlist_Id,
                         principalTable: "Wishlists",
                         principalColumn: "WishlistId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cart_items",
+                columns: table => new
+                {
+                    Cart_itemId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Cart_Id = table.Column<int>(type: "int", nullable: false),
+                    Sku_Id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cart_items", x => x.Cart_itemId);
+                    table.ForeignKey(
+                        name: "FK_Cart_items_Carts_Cart_Id",
+                        column: x => x.Cart_Id,
+                        principalTable: "Carts",
+                        principalColumn: "CartId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Cart_items_product_Skus_Sku_Id",
+                        column: x => x.Sku_Id,
+                        principalTable: "product_Skus",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -486,9 +486,9 @@ namespace e_commerce_project.Migrations
                 column: "Cart_Id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cart_items_Product_Id",
+                name: "IX_Cart_items_Sku_Id",
                 table: "Cart_items",
-                column: "Product_Id");
+                column: "Sku_Id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Carts_UserId",
@@ -570,9 +570,6 @@ namespace e_commerce_project.Migrations
                 name: "Payment_details");
 
             migrationBuilder.DropTable(
-                name: "product_Skus");
-
-            migrationBuilder.DropTable(
                 name: "Products_Categories");
 
             migrationBuilder.DropTable(
@@ -585,16 +582,19 @@ namespace e_commerce_project.Migrations
                 name: "Carts");
 
             migrationBuilder.DropTable(
+                name: "product_Skus");
+
+            migrationBuilder.DropTable(
                 name: "Orders");
 
             migrationBuilder.DropTable(
                 name: "Categories");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Wishlists");
 
             migrationBuilder.DropTable(
-                name: "Wishlists");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

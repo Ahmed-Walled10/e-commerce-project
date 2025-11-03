@@ -12,7 +12,7 @@ using e_commerce_project.Modles;
 namespace e_commerce_project.Migrations
 {
     [DbContext(typeof(sql_e_commerce_DB))]
-    [Migration("20251021045805_init")]
+    [Migration("20251102232454_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -214,8 +214,8 @@ namespace e_commerce_project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartId"));
 
-                    b.Property<int>("Total")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -240,17 +240,17 @@ namespace e_commerce_project.Migrations
                     b.Property<int>("Cart_Id")
                         .HasColumnType("int");
 
-                    b.Property<int>("Product_Id")
+                    b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
+                    b.Property<int>("Sku_Id")
                         .HasColumnType("int");
 
                     b.HasKey("Cart_itemId");
 
                     b.HasIndex("Cart_Id");
 
-                    b.HasIndex("Product_Id");
+                    b.HasIndex("Sku_Id");
 
                     b.ToTable("Cart_items");
                 });
@@ -299,8 +299,8 @@ namespace e_commerce_project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Total_Amount")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Total_Amount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -347,8 +347,8 @@ namespace e_commerce_project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Order_Id")
                         .HasColumnType("int");
@@ -673,15 +673,15 @@ namespace e_commerce_project.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("e_commerce_project.Modles.Products", "Product")
+                    b.HasOne("e_commerce_project.Modles.Product_skus", "Sku")
                         .WithMany("Cart_Items")
-                        .HasForeignKey("Product_Id")
+                        .HasForeignKey("Sku_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cart");
 
-                    b.Navigation("Product");
+                    b.Navigation("Sku");
                 });
 
             modelBuilder.Entity("e_commerce_project.Modles.Order", b =>
@@ -803,10 +803,13 @@ namespace e_commerce_project.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("e_commerce_project.Modles.Products", b =>
+            modelBuilder.Entity("e_commerce_project.Modles.Product_skus", b =>
                 {
                     b.Navigation("Cart_Items");
+                });
 
+            modelBuilder.Entity("e_commerce_project.Modles.Products", b =>
+                {
                     b.Navigation("Order_Item");
 
                     b.Navigation("Product_Skus");

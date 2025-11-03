@@ -6,7 +6,7 @@ namespace e_commerce_project.Modles
     public class Payment_details
     {
         public int Id { get; set; }
-        public int Amount { get; set; } = 0;
+        public Decimal Amount { get; set; } = 0;
         public string Payment_Method { get; set; } = string.Empty;
         public string Payment_Status { get; set; } = "Pending";
         public DateTime Payment_Date { get; set; } = DateTime.Now;

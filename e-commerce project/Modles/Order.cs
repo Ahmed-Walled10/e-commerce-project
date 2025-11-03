@@ -6,7 +6,7 @@ namespace e_commerce_project.Modles
     public class Order
     {
         public int OrderId { get; set; }
-        public int Total_Amount { get; set; } = 0;
+        public Decimal Total_Amount { get; set; } = 0;
         public string Status { get; set; } = "Pending";
         public DateTime Order_Date { get; set; } = DateTime.Now;
         public DateTime Delivery_Date { get; set; }

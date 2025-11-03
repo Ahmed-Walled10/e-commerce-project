@@ -1,8 +1,8 @@
-﻿namespace e_commerce_project.DTOs
+﻿namespace e_commerce_project.DTOs.Cart
 {
     public class AddCartItemDTO
     {
-        public int Product_Id { get; set; }
+        public int Sku_Id { get; set; }
         public int Quantity { get; set; } = 1;
     }
 }

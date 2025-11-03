@@ -6,7 +6,7 @@ namespace e_commerce_project.Modles
     public class Cart
     {
         public int CartId { get; set; }
-        public int Total { get; set; } = 0;
+        public Decimal Total { get; set; } = 0;
 
         public string UserId { get; set; }
         [ForeignKey("UserId")]

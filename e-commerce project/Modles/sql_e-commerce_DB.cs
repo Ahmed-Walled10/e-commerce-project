@@ -93,11 +93,11 @@ namespace e_commerce_project.Modles
                 .HasForeignKey(pc => pc.Category_Id)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // 🧾 Product ↔ Cart_item (many-to-many)
+            // 🧾 Product_sku ↔ Cart_item (many-to-many)
             modelBuilder.Entity<Cart_item>()
-                .HasOne(ci => ci.Product)
+                .HasOne(ci => ci.Sku)
                 .WithMany(p => p.Cart_Items)
-                .HasForeignKey(ci => ci.Product_Id)
+                .HasForeignKey(ci => ci.Sku_Id)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // 📦 Product_skus ↔ Product (many skus to one product)

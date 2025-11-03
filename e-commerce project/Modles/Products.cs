@@ -18,8 +18,6 @@ namespace e_commerce_project.Modles
 
         public virtual ICollection<Products_categories> Products_Categories { get; set; } = new List<Products_categories>();
 
-        public virtual ICollection<Cart_item> Cart_Items { get; set; } = new List<Cart_item>();
-
         public virtual ICollection<Product_skus> Product_Skus { get; set; } = new List<Product_skus>();
 
         public virtual ICollection<Order_item> Order_Item { get; set; } = new List<Order_item>();

@@ -20,7 +20,8 @@ namespace e_commerce_project.Repository
 
         public async Task<IEnumerable<ProductsDTO>> Get_All_Products(string? name,string? description ,int pagenumber ,int pasgesize)
         {
-            var pros = context.Products.Include(x=>x.Product_Skus) as IQueryable<Products>;
+            var pros = context.Products
+                       .Include(x=>x.Product_Skus) as IQueryable<Products>;
 
             if(!string.IsNullOrWhiteSpace(name))
             {
