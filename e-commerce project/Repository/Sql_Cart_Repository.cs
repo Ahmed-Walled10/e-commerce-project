@@ -4,6 +4,7 @@ using e_commerce_project.DTOs.Cart;
 using e_commerce_project.Modles;
 using e_commerce_project.Services;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 
@@ -41,7 +42,6 @@ namespace e_commerce_project.Repository
             return mapper.Map<CartDTO>(cart);
 
         }
-
         public async Task<CartDTO> AddToCart(AddCartItemDTO item, string UserId)
         {
             var cart = await context.Carts
@@ -93,14 +93,45 @@ namespace e_commerce_project.Repository
             return result;
 
         }
-        public async Task UpdateItemQuantity(int Proid, int quantity, string UserId)
+        public async Task<CartDTO> UpdateItemQuantity(AddCartItemDTO item, string UserId)
         {
-            throw new NotImplementedException();
-        }
+            var cart = await context.Carts
+                .Include(c => c.Cart_item)
+                 .ThenInclude(ci => ci.Sku)
+                  .ThenInclude(s => s.Product)
+                .FirstOrDefaultAsync(c => c.UserId == UserId);
 
-        public async Task RemoveFromCart(int Proid, string UserId)
+            var existingItem = cart.Cart_item
+                    .FirstOrDefault(ci => ci.Sku_Id == item.Sku_Id);
+
+
+                existingItem.Quantity += item.Quantity;
+                cart.Total += existingItem.Subtotal;
+                await context.SaveChangesAsync();
+
+
+                var result = mapper.Map<CartDTO>(cart);
+                return result;
+        }
+        public async Task<CartDTO> RemoveFromCart(int Sku_id, string UserId)
         {
-            throw new NotImplementedException();
+            var cart = await context.Carts
+                .Include(c => c.Cart_item)
+                 .ThenInclude(ci => ci.Sku)
+                  .ThenInclude(s => s.Product)
+                .FirstOrDefaultAsync(c => c.UserId == UserId);
+
+            var item = cart.Cart_item.FirstOrDefault(ci => ci.Sku_Id == Sku_id);
+
+            cart.Total -= item.Subtotal;
+
+            context.Cart_items.Remove(item);
+
+            await context.SaveChangesAsync();
+
+
+            var result = mapper.Map<CartDTO>(cart);
+            return result;
         }
 
     }

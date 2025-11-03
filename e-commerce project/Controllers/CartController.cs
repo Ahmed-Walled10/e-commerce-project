@@ -46,18 +46,21 @@ namespace e_commerce_project.Controllers
 
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateItemQuantity(int id, int quantity)
+        [HttpPut]
+        public async Task<IActionResult> UpdateItemQuantity(AddCartItemDTO item)
         {
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            return Ok($"Updated item with id {id} to quantity {quantity}");
+            var cart = await context.UpdateItemQuantity(item,UserId);
+            return Ok(cart);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> RemoveFromCart(int id)
+        [HttpDelete("{Sku_id:int}")]
+        public async Task<IActionResult> RemoveFromCart(int Sku_id)
         {
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            return Ok($"Removed item with id {id} from cart");
+            var cart = await context.RemoveFromCart(Sku_id, UserId);
+            return Ok(cart);
+
         }
 
 

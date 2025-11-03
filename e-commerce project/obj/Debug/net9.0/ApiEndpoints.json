@@ -44,20 +44,15 @@
   {
     "ContainingType": "e_commerce_project.Controllers.CartController",
     "Method": "UpdateItemQuantity",
-    "RelativePath": "api/v1/Cart/{id}",
+    "RelativePath": "api/v1/Cart",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "item",
+        "Type": "e_commerce_project.DTOs.Cart.AddCartItemDTO",
         "IsRequired": true
-      },
-      {
-        "Name": "quantity",
-        "Type": "System.Int32",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -65,13 +60,13 @@
   {
     "ContainingType": "e_commerce_project.Controllers.CartController",
     "Method": "RemoveFromCart",
-    "RelativePath": "api/v1/Cart/{id}",
+    "RelativePath": "api/v1/Cart/{Sku_id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Sku_id",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -9,8 +9,8 @@ namespace e_commerce_project.Services
     {
         Task<CartDTO> GetCart(string UserId);
         Task<CartDTO> AddToCart(AddCartItemDTO item, string UserId);
-        Task UpdateItemQuantity(int Proid, int quantity, string UserId);
-        Task RemoveFromCart(int Proid, string UserId);
+        Task<CartDTO> UpdateItemQuantity(AddCartItemDTO item, string UserId);
+        Task<CartDTO> RemoveFromCart(int Sku_id, string UserId);
 
     }
 }
