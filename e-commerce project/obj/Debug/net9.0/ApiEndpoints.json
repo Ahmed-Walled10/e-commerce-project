@@ -222,6 +222,16 @@
   },
   {
     "ContainingType": "e_commerce_project.Controllers.AuthController",
+    "Method": "GetProfile",
+    "RelativePath": "api/v1/Profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "api/v1/register",
     "HttpMethod": "POST",

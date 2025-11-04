@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
+using e_commerce_project.DTOs.User;
 using e_commerce_project.Modles;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 
 namespace e_commerce_project.Controllers
 {
@@ -78,6 +80,7 @@ namespace e_commerce_project.Controllers
         }
 
         [HttpPost("Logout")]
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
@@ -108,7 +111,17 @@ namespace e_commerce_project.Controllers
             string massage = $"Welcome aboard, {NewUser.First_Name}!";
             return Ok(massage);
         }
-    
+
+        [HttpGet("Profile")]
+        [Authorize]
+        public async Task<IActionResult> GetProfile()
+        {
+            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await userManager.FindByIdAsync(UserId);
+            var userProfile = mapper.Map<UserProfileDTO>(user);
+            return Ok(userProfile);
+        }
+
 
     }
 
