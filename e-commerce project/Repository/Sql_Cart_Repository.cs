@@ -104,9 +104,16 @@ namespace e_commerce_project.Repository
             var existingItem = cart.Cart_item
                     .FirstOrDefault(ci => ci.Sku_Id == item.Sku_Id);
 
+               if (existingItem.Quantity + item.Quantity <= 0)
+               {
+                   await RemoveFromCart(existingItem.Sku_Id, UserId);
+               }
+               else
+               {
+                   existingItem.Quantity += item.Quantity;
+                   cart.Total += existingItem.Subtotal;
+               }
 
-                existingItem.Quantity += item.Quantity;
-                cart.Total += existingItem.Subtotal;
                 await context.SaveChangesAsync();
 
 
