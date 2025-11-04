@@ -22,7 +22,7 @@ namespace e_commerce_project.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Get_All_Products(string? name, string? description, int pagenumber=1, int pagesize=20)
+        public async Task<IActionResult> Get_All_Products(string? name, string? description, List<int>? categoryIds, int pagenumber=1, int pagesize=20)
         {
             if (pagesize > maxPageSize)
                 pagesize = maxPageSize;

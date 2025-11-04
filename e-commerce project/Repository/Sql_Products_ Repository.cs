@@ -18,10 +18,13 @@ namespace e_commerce_project.Repository
             mapper = _mapper;
         }
 
-        public async Task<IEnumerable<ProductsDTO>> Get_All_Products(string? name,string? description ,int pagenumber ,int pasgesize)
+        public async Task<IEnumerable<ProductsDTO>> Get_All_Products(string? name,string? description, List<int>? categoryIds, int pagenumber ,int pasgesize)
         {
             var pros = context.Products
-                       .Include(x=>x.Product_Skus) as IQueryable<Products>;
+                       .Include(x=>x.Product_Skus)
+                       .Include(x=>x.Products_Categories)
+                        .ThenInclude(pc=>pc.Category)
+                        as IQueryable<Products>;
 
             if(!string.IsNullOrWhiteSpace(name))
             {
@@ -33,6 +36,11 @@ namespace e_commerce_project.Repository
                 description=description.Trim();
                 pros = pros.Where(x => x.Name.ToLower().Contains(description.ToLower())
                     || x.Description != null && x.Description.ToLower().Contains(description.ToLower()));
+            }
+            if (categoryIds != null && categoryIds.Count > 0)
+            {
+                pros = pros.Where(p =>
+                    p.Products_Categories.Any(pc => categoryIds.Contains(pc.Category_Id)));
             }
 
             var pros2 = await pros.Skip((pagenumber - 1) * pasgesize)
