@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\micro\\source\\repos\\e-commerce project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,32 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "e-commerce project\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "e-commerce project\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAABzAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T23:24:14.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Sql_Products_ Repository.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Products_ Repository.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\Repository\\Sql_Products_ Repository.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Products_ Repository.cs",
-              "RelativeToolTip": "e-commerce project\\Repository\\Sql_Products_ Repository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwC8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T23:24:57.976Z",
               "EditorCaption": ""
             },
             {

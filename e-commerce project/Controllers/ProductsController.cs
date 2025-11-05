@@ -27,7 +27,7 @@ namespace e_commerce_project.Controllers
             if (pagesize > maxPageSize)
                 pagesize = maxPageSize;
 
-            var pros = await context.Get_All_Products(name, description, pagenumber, pagesize);
+            var pros = await context.Get_All_Products(name, description, categoryIds, pagenumber, pagesize);
             return Ok(pros);
 
         }
