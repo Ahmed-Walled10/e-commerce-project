@@ -30,8 +30,8 @@ namespace e_commerce_project.Controllers
         public async Task<IActionResult> AddToWishlist(AddCartItemDTO item)
         {
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var wishlist = await context.AddToWishlist(item, UserId);
-            return Ok(wishlist);
+             await context.AddToWishlist(item, UserId);
+            return Ok();
         }
 
         [HttpPost("movetocart")]
@@ -46,8 +46,8 @@ namespace e_commerce_project.Controllers
         public async Task<IActionResult> RemoveFromWishlist(int Sku_id)
         {
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var wishlist = await context.RemoveFromCart(Sku_id, UserId);
-            return Ok(wishlist);
+            await context.RemoveFromCart(Sku_id, UserId);
+            return Ok();
         }
 
 

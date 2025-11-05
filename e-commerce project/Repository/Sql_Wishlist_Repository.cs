@@ -41,12 +41,10 @@ namespace e_commerce_project.Repository
             return mapper.Map<WishlistDTO>(wishlist);
 
         }
-        public async Task<WishlistDTO> AddToWishlist(AddCartItemDTO item, string UserId)
+        public async Task AddToWishlist(AddCartItemDTO item, string UserId)
         {
             var wishlist = await context.Wishlists
              .Include(w => w.WishList_Products)
-              .ThenInclude(wp => wp.Sku)
-               .ThenInclude(p=>p.Product)
              .FirstOrDefaultAsync(w => w.UserId == UserId);
 
             if (wishlist == null)
@@ -57,7 +55,7 @@ namespace e_commerce_project.Repository
             }
 
             if (wishlist.WishList_Products.Any(wp => wp.Sku_Id == item.Sku_Id))
-                return mapper.Map<WishlistDTO>(wishlist);
+                return;
 
             
             var wishlistItem = mapper.Map<WishList_products>(item);
@@ -65,7 +63,7 @@ namespace e_commerce_project.Repository
             wishlist.WishList_Products.Add(wishlistItem);
             await context.SaveChangesAsync();
 
-            return mapper.Map<WishlistDTO>(wishlist);
+            return;
 
         }
         public async Task<CartDTO> AddToCart(AddCartItemDTO item, string UserId)
@@ -77,12 +75,10 @@ namespace e_commerce_project.Repository
             return mapper.Map<CartDTO>(cart);
 
         }
-        public async Task<WishlistDTO> RemoveFromCart(int Sku_id, string UserId)
+        public async Task RemoveFromCart(int Sku_id, string UserId)
         {
             var wishlist = await context.Wishlists
              .Include(w => w.WishList_Products)
-              .ThenInclude(wp => wp.Sku)
-               .ThenInclude(p => p.Product)
              .FirstOrDefaultAsync(w => w.UserId == UserId);
 
             var item = wishlist.WishList_Products.FirstOrDefault(wp => wp.Sku_Id == Sku_id);
@@ -91,7 +87,7 @@ namespace e_commerce_project.Repository
 
             await context.SaveChangesAsync();
 
-            return mapper.Map<WishlistDTO>(wishlist);
+            return;
 
         }
 
