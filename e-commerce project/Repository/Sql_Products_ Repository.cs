@@ -82,6 +82,42 @@ namespace e_commerce_project.Repository
             await context.Products.AddAsync(product);
             await context.SaveChangesAsync();
         }
+        public async Task Add_Sku_To_Product(int productId, AddProductSkuDTO skuDto)
+        {
+            var product = await context.Products
+                .Include(p => p.Product_Skus)
+                .FirstOrDefaultAsync(p => p.Id == productId);
+
+            if (product == null)
+                throw new Exception("Product not found");
+
+
+            var newSku = mapper.Map<Product_skus>(skuDto);
+            product.Product_Skus.Add(newSku);
+            await context.SaveChangesAsync();
+            return;
+
+        }
+        public async Task Update_Sku(int productId, int skuId, UpdateSkuDTO UpSku)
+        {
+            var product = await context.Products
+                .Include(p => p.Product_Skus)
+                .FirstOrDefaultAsync(p => p.Id == productId);
+
+            var sku = product.Product_Skus.First(s => s.Id == skuId);
+
+            if (product == null)
+                throw new Exception("Product not found");
+            if (sku == null)
+                throw new Exception("SKU not found");
+
+            mapper.Map(UpSku, sku);
+            sku.UpdatedDate = DateTime.Now;
+            await context.SaveChangesAsync();
+
+
+            return;
+        }
         public async Task Update_Product_By_Id(int Id, UpdateProductDTO UPro)
         {
             var product = await context.Products
@@ -94,8 +130,8 @@ namespace e_commerce_project.Repository
             mapper.Map(UPro, product);
             product.UpdatedDate = DateTime.Now;
 
-            
-            foreach (var skuDto in UPro.Skus)
+
+            /*foreach (var skuDto in UPro.Skus)
             {
                 if (skuDto.Id.HasValue)
                 {
@@ -117,7 +153,7 @@ namespace e_commerce_project.Repository
             // ✅ Remove SKUs not included in DTO
             var dtoSkuIds = UPro.Skus.Where(s => s.Id.HasValue).Select(s => s.Id.Value).ToList();
             var skusToRemove = product.Product_Skus.Where(s => !dtoSkuIds.Contains(s.Id)).ToList();
-            context.product_Skus.RemoveRange(skusToRemove);
+            context.product_Skus.RemoveRange(skusToRemove);*/
 
             await context.SaveChangesAsync();
         }

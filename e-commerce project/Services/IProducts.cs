@@ -11,6 +11,8 @@ namespace e_commerce_project.Services
         Task<ProductWithSkusDTO> Get_Product_By_Id(int Id);
         Task<ProductSkuDTO> GetSkuByProductAsync(int productId, int skuId);
         Task Create_New_Product(CreateProductDTO product);
+        Task Add_Sku_To_Product(int productId, AddProductSkuDTO skuDto);
+        Task Update_Sku(int productId, int skuId, UpdateSkuDTO usku);
         Task Update_Product_By_Id(int Id, UpdateProductDTO UPro);
         Task Delete_Product_By_Id(int Id);
     }

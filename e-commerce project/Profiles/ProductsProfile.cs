@@ -40,8 +40,9 @@ namespace e_commerce_project.Services
             CreateMap<CreateProductSkuDTO, Product_skus>();
             CreateMap<CreateProductCategoryDTO, Categories>();
 
+            CreateMap<AddProductSkuDTO, Product_skus>().ReverseMap();
 
-
+            CreateMap<UpdateSkuDTO, Product_skus>().ReverseMap();
 
         }
     }

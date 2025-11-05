@@ -61,7 +61,7 @@ namespace e_commerce_project.Controllers
 
 
 
-        [HttpPost]
+        [HttpPost("create")]
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Create_New_Product(CreateProductDTO product)
         {
@@ -73,7 +73,38 @@ namespace e_commerce_project.Controllers
             return Ok("Product added successfully!");
         }
 
-        [HttpPut("{Id:int}")]
+        [HttpPost("add-sku")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AddSkuToProduct(int productId, AddProductSkuDTO skuDto)
+        {
+            try
+            {
+                await context.Add_Sku_To_Product(productId, skuDto);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("update-sku")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Update_Sku(int productId, int skuId, UpdateSkuDTO UpSku)
+        {
+            try
+            {
+                await context.UpdateSku(productId, skuId, UpSku);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpPut("update-product")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update_Product_By_Id(int Id, UpdateProductDTO UPro)
         {
@@ -104,6 +135,7 @@ namespace e_commerce_project.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
 
 
     }
