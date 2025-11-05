@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\micro\\source\\repos\\e-commerce project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\repository\\sql_wishlist_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\repository\\sql_wishlist_repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\dtos\\wishlist\\wishlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\dtos\\wishlist\\wishlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\services\\iwishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\services\\iwishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\dtos\\wishlist\\wishlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\dtos\\wishlist\\wishlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\profiles\\wishlistprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\profiles\\wishlistprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs*",
-              "RelativeToolTip": "e-commerce project\\Controllers\\ProductsController.cs*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwEAAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "WishlistController.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\WishlistController.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Controllers\\WishlistController.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\WishlistController.cs",
+              "RelativeToolTip": "e-commerce project\\Controllers\\WishlistController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T23:24:14.102Z",
+              "WhenOpened": "2025-11-05T01:00:33.974Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IProducts.cs",
-              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\IProducts.cs",
-              "RelativeDocumentMoniker": "e-commerce project\\Services\\IProducts.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\IProducts.cs",
-              "RelativeToolTip": "e-commerce project\\Services\\IProducts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABxAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IWishlist.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\IWishlist.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Services\\IWishlist.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\IWishlist.cs",
+              "RelativeToolTip": "e-commerce project\\Services\\IWishlist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T23:24:49.512Z",
+              "WhenOpened": "2025-11-05T01:08:36.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WishlistDTO.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\Wishlist\\WishlistDTO.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\DTOs\\Wishlist\\WishlistDTO.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\Wishlist\\WishlistDTO.cs",
+              "RelativeToolTip": "e-commerce project\\DTOs\\Wishlist\\WishlistDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T01:13:18.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WishlistItemDTO.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\Wishlist\\WishlistItemDTO.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\DTOs\\Wishlist\\WishlistItemDTO.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\DTOs\\Wishlist\\WishlistItemDTO.cs",
+              "RelativeToolTip": "e-commerce project\\DTOs\\Wishlist\\WishlistItemDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T02:03:13.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WishlistProfile.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Profiles\\WishlistProfile.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Profiles\\WishlistProfile.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Profiles\\WishlistProfile.cs",
+              "RelativeToolTip": "e-commerce project\\Profiles\\WishlistProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T01:15:18.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sql_Wishlist_Repository.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Wishlist_Repository.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Repository\\Sql_Wishlist_Repository.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Wishlist_Repository.cs",
+              "RelativeToolTip": "e-commerce project\\Repository\\Sql_Wishlist_Repository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwEMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T01:08:20.758Z",
               "EditorCaption": ""
             },
             {

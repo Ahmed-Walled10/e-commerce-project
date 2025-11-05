@@ -12,7 +12,7 @@ using e_commerce_project.Modles;
 namespace e_commerce_project.Migrations
 {
     [DbContext(typeof(sql_e_commerce_DB))]
-    [Migration("20251102232454_init")]
+    [Migration("20251105022820_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -562,12 +562,12 @@ namespace e_commerce_project.Migrations
                     b.Property<int>("Wishlist_Id")
                         .HasColumnType("int");
 
-                    b.Property<int>("Product_Id")
+                    b.Property<int>("Sku_Id")
                         .HasColumnType("int");
 
-                    b.HasKey("Wishlist_Id", "Product_Id");
+                    b.HasKey("Wishlist_Id", "Sku_Id");
 
-                    b.HasIndex("Product_Id");
+                    b.HasIndex("Sku_Id");
 
                     b.ToTable("WishList_Products");
                 });
@@ -757,9 +757,9 @@ namespace e_commerce_project.Migrations
 
             modelBuilder.Entity("e_commerce_project.Modles.WishList_products", b =>
                 {
-                    b.HasOne("e_commerce_project.Modles.Products", "Product")
+                    b.HasOne("e_commerce_project.Modles.Product_skus", "Sku")
                         .WithMany("WishList_Products")
-                        .HasForeignKey("Product_Id")
+                        .HasForeignKey("Sku_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -769,7 +769,7 @@ namespace e_commerce_project.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
+                    b.Navigation("Sku");
 
                     b.Navigation("Wishlist");
                 });
@@ -806,6 +806,8 @@ namespace e_commerce_project.Migrations
             modelBuilder.Entity("e_commerce_project.Modles.Product_skus", b =>
                 {
                     b.Navigation("Cart_Items");
+
+                    b.Navigation("WishList_Products");
                 });
 
             modelBuilder.Entity("e_commerce_project.Modles.Products", b =>
@@ -815,8 +817,6 @@ namespace e_commerce_project.Migrations
                     b.Navigation("Product_Skus");
 
                     b.Navigation("Products_Categories");
-
-                    b.Navigation("WishList_Products");
                 });
 
             modelBuilder.Entity("e_commerce_project.Modles.Users", b =>

@@ -54,9 +54,9 @@ namespace e_commerce_project.Modles
                 .HasForeignKey(o => o.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // 🧺 Wishlist ↔ Product (many-to-many)
+            // 🧺 Wishlist ↔ Product_sku (many-to-many)
             modelBuilder.Entity<WishList_products>()
-                .HasKey(wp => new { wp.Wishlist_Id, wp.Product_Id });
+                .HasKey(wp => new { wp.Wishlist_Id, wp.Sku_Id });
 
             modelBuilder.Entity<WishList_products>()
                 .HasOne(wp => wp.Wishlist)
@@ -65,9 +65,9 @@ namespace e_commerce_project.Modles
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<WishList_products>()
-                .HasOne(wp => wp.Product)
+                .HasOne(wp => wp.Sku)
                 .WithMany(p => p.WishList_Products)
-                .HasForeignKey(wp => wp.Product_Id)
+                .HasForeignKey(wp => wp.Sku_Id)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // 🛒 Cart ↔ Cart_item (1-to-many)

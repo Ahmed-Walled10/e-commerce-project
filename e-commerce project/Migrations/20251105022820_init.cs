@@ -386,30 +386,6 @@ namespace e_commerce_project.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "WishList_Products",
-                columns: table => new
-                {
-                    Wishlist_Id = table.Column<int>(type: "int", nullable: false),
-                    Product_Id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_WishList_Products", x => new { x.Wishlist_Id, x.Product_Id });
-                    table.ForeignKey(
-                        name: "FK_WishList_Products_Products_Product_Id",
-                        column: x => x.Product_Id,
-                        principalTable: "Products",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_WishList_Products_Wishlists_Wishlist_Id",
-                        column: x => x.Wishlist_Id,
-                        principalTable: "Wishlists",
-                        principalColumn: "WishlistId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Cart_items",
                 columns: table => new
                 {
@@ -430,6 +406,30 @@ namespace e_commerce_project.Migrations
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Cart_items_product_Skus_Sku_Id",
+                        column: x => x.Sku_Id,
+                        principalTable: "product_Skus",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "WishList_Products",
+                columns: table => new
+                {
+                    Wishlist_Id = table.Column<int>(type: "int", nullable: false),
+                    Sku_Id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WishList_Products", x => new { x.Wishlist_Id, x.Sku_Id });
+                    table.ForeignKey(
+                        name: "FK_WishList_Products_Wishlists_Wishlist_Id",
+                        column: x => x.Wishlist_Id,
+                        principalTable: "Wishlists",
+                        principalColumn: "WishlistId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_WishList_Products_product_Skus_Sku_Id",
                         column: x => x.Sku_Id,
                         principalTable: "product_Skus",
                         principalColumn: "Id",
@@ -528,9 +528,9 @@ namespace e_commerce_project.Migrations
                 column: "Category_Id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_WishList_Products_Product_Id",
+                name: "IX_WishList_Products_Sku_Id",
                 table: "WishList_Products",
-                column: "Product_Id");
+                column: "Sku_Id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Wishlists_UserId",
@@ -582,9 +582,6 @@ namespace e_commerce_project.Migrations
                 name: "Carts");
 
             migrationBuilder.DropTable(
-                name: "product_Skus");
-
-            migrationBuilder.DropTable(
                 name: "Orders");
 
             migrationBuilder.DropTable(
@@ -594,10 +591,13 @@ namespace e_commerce_project.Migrations
                 name: "Wishlists");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "product_Skus");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Products");
         }
     }
 }

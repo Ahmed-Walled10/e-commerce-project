@@ -89,8 +89,7 @@ namespace e_commerce_project.Repository
             cart.Total = cart.Cart_item.Sum(ci => ci.Subtotal);
             await context.SaveChangesAsync();
 
-            var result = mapper.Map<CartDTO>(cart);
-            return result;
+            return mapper.Map<CartDTO>(cart); 
 
         }
         public async Task<CartDTO> UpdateItemQuantity(AddCartItemDTO item, string UserId)

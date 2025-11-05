@@ -118,6 +118,11 @@
         "IsRequired": false
       },
       {
+        "Name": "categoryIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
         "Name": "pagenumber",
         "Type": "System.Int32",
         "IsRequired": false
@@ -241,6 +246,64 @@
       {
         "Name": "user",
         "Type": "e_commerce_project.Controllers.UsersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.WishlistController",
+    "Method": "GetWishlist",
+    "RelativePath": "api/v1/Wishlist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.WishlistController",
+    "Method": "AddToWishlist",
+    "RelativePath": "api/v1/Wishlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "e_commerce_project.DTOs.Cart.AddCartItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.WishlistController",
+    "Method": "RemoveFromWishlist",
+    "RelativePath": "api/v1/Wishlist/{Sku_id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sku_id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.WishlistController",
+    "Method": "MoveToCart",
+    "RelativePath": "api/v1/Wishlist/movetocart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "e_commerce_project.DTOs.Cart.AddCartItemDTO",
         "IsRequired": true
       }
     ],

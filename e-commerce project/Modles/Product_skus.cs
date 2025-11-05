@@ -26,6 +26,8 @@ namespace e_commerce_project.Modles
         public virtual Products Product { get; set; }
 
         public virtual ICollection<Cart_item> Cart_Items { get; set; } = new List<Cart_item>();
+        public virtual ICollection<WishList_products> WishList_Products { get; set; } = new List<WishList_products>();
+
 
     }
 }

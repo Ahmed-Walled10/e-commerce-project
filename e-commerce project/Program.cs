@@ -17,6 +17,7 @@ builder.Services.AddDbContext<sql_e_commerce_DB>(options =>
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<IProducts, Sql_Products__Repository>();
 builder.Services.AddScoped<ICart, Sql_Cart_Repository>();
+builder.Services.AddScoped<IWishlist, Sql_Wishlist_Repository>();
 builder.Services.AddIdentity<Users, IdentityRole>()
        .AddEntityFrameworkStores<sql_e_commerce_DB>();
        

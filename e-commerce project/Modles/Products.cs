@@ -14,7 +14,7 @@ namespace e_commerce_project.Modles
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime UpdatedDate { get; set; }
 
-        public virtual ICollection<WishList_products> WishList_Products { get; set; } = new List<WishList_products>();
+       // public virtual ICollection<WishList_products> WishList_Products { get; set; } = new List<WishList_products>();
 
         public virtual ICollection<Products_categories> Products_Categories { get; set; } = new List<Products_categories>();
 
