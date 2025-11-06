@@ -15,6 +15,7 @@ namespace e_commerce_project.Services
         Task Update_Sku(int productId, int skuId, UpdateSkuDTO usku);
         Task Update_Product_By_Id(int Id, UpdateProductDTO UPro);
         Task Delete_Product_By_Id(int Id);
+        Task Delete_Sku(int productId, int skuId);
     }
 }
     

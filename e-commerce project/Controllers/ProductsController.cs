@@ -45,7 +45,7 @@ namespace e_commerce_project.Controllers
                 return BadRequest(ex.Message);
             }
         }
-       [HttpGet("{productId:int}/skus/{skuId:int}")]
+        [HttpGet("{productId:int}/sku/{skuId:int}")]
         public async Task<IActionResult> GetSkuForProduct(int productId, int skuId)
         {
             try
@@ -61,7 +61,7 @@ namespace e_commerce_project.Controllers
 
 
 
-        [HttpPost("create")]
+        [HttpPost]
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Create_New_Product(CreateProductDTO product)
         {
@@ -73,38 +73,8 @@ namespace e_commerce_project.Controllers
             return Ok("Product added successfully!");
         }
 
-        [HttpPost("add-sku")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddSkuToProduct(int productId, AddProductSkuDTO skuDto)
-        {
-            try
-            {
-                await context.Add_Sku_To_Product(productId, skuDto);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
 
-        [HttpPut("update-sku")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Update_Sku(int productId, int skuId, UpdateSkuDTO UpSku)
-        {
-            try
-            {
-                await context.UpdateSku(productId, skuId, UpSku);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
-        }
-
-        [HttpPut("update-product")]
+        [HttpPut]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update_Product_By_Id(int Id, UpdateProductDTO UPro)
         {
@@ -137,6 +107,51 @@ namespace e_commerce_project.Controllers
         }
 
 
+        [HttpPost("sku")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AddSkuToProduct(int productId, AddProductSkuDTO skuDto)
+        {
+            try
+            {
+                await context.Add_Sku_To_Product(productId, skuDto);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("sku")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Update_Sku(int productId, int skuId, UpdateSkuDTO UpSku)
+        {
+            try
+            {
+                await context.UpdateSku(productId, skuId, UpSku);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpDelete("sku")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete_Sku(int productId, int skuId)
+        {
+            try
+            {
+                await context.Delete_Sku(productId, skuId);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
     }
 }

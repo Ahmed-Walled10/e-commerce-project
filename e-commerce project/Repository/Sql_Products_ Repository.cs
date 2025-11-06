@@ -2,6 +2,7 @@
 using e_commerce_project.DTOs;
 using e_commerce_project.Modles;
 using e_commerce_project.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
@@ -81,6 +82,7 @@ namespace e_commerce_project.Repository
             var product = mapper.Map<Products>(prodto);
             await context.Products.AddAsync(product);
             await context.SaveChangesAsync();
+            return;
         }
         public async Task Add_Sku_To_Product(int productId, AddProductSkuDTO skuDto)
         {
@@ -156,6 +158,7 @@ namespace e_commerce_project.Repository
             context.product_Skus.RemoveRange(skusToRemove);*/
 
             await context.SaveChangesAsync();
+            return;
         }
         public async Task Delete_Product_By_Id(int Id)
         {
@@ -164,7 +167,24 @@ namespace e_commerce_project.Repository
                 throw new Exception("Product not found");
             context.Products.Remove(Pro);
             await context.SaveChangesAsync();
+            return;
         }
+        public async Task Delete_Sku(int productId, int skuId)
+        {
+            var product = await context.Products
+                .Include(p => p.Product_Skus)
+                .FirstOrDefaultAsync(p => p.Id == productId);
+            var sku = product.Product_Skus.FirstOrDefault(s => s.Id == skuId);
 
+            if (product == null)
+                throw new Exception("Product not found");
+            if (sku == null)
+                throw new Exception("SKU not found");
+
+
+            context.product_Skus.Remove(sku);
+            await context.SaveChangesAsync();
+            return;
+        }
     }
 }
