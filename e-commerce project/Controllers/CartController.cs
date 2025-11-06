@@ -33,6 +33,8 @@ namespace e_commerce_project.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToCart(AddCartItemDTO item)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             try
             {
@@ -49,6 +51,8 @@ namespace e_commerce_project.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateItemQuantity(AddCartItemDTO item)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var cart = await context.UpdateItemQuantity(item,UserId);
             return Ok(cart);

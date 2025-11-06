@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\micro\\source\\repos\\e-commerce project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WishlistController.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\WishlistController.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Controllers\\WishlistController.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\WishlistController.cs",
+              "RelativeToolTip": "e-commerce project\\Controllers\\WishlistController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T16:27:48.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "e-commerce project\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\CartController.cs",
+              "RelativeToolTip": "e-commerce project\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T16:27:32.803Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -66,16 +100,16 @@
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "e-commerce project\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs*",
-              "RelativeToolTip": "e-commerce project\\Controllers\\ProductsController.cs*",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAawIIAAAAlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "e-commerce project\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswIMAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-05T22:54:55.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Sql_Products_ Repository.cs",
               "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Products_ Repository.cs",
               "RelativeDocumentMoniker": "e-commerce project\\Repository\\Sql_Products_ Repository.cs",
@@ -83,12 +117,11 @@
               "RelativeToolTip": "e-commerce project\\Repository\\Sql_Products_ Repository.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAcwE8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T22:42:53.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T22:42:53.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "IProducts.cs",
               "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\IProducts.cs",
               "RelativeDocumentMoniker": "e-commerce project\\Services\\IProducts.cs",
@@ -96,8 +129,7 @@
               "RelativeToolTip": "e-commerce project\\Services\\IProducts.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAADwvxEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T22:54:01.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T22:54:01.6Z"
             }
           ]
         }

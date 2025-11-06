@@ -78,6 +78,9 @@ namespace e_commerce_project.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update_Product_By_Id(int Id, UpdateProductDTO UPro)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            
             try
             {
                 await context.Update_Product_By_Id(Id, UPro);
@@ -111,6 +114,8 @@ namespace e_commerce_project.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddSkuToProduct(int productId, AddProductSkuDTO skuDto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
                 await context.Add_Sku_To_Product(productId, skuDto);
@@ -126,6 +131,8 @@ namespace e_commerce_project.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update_Sku(int productId, int skuId, UpdateSkuDTO UpSku)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             try
             {
                 await context.Update_Sku(productId, skuId, UpSku);

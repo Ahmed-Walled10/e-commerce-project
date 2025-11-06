@@ -29,6 +29,8 @@ namespace e_commerce_project.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToWishlist(AddCartItemDTO item)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
              await context.AddToWishlist(item, UserId);
             return Ok();
@@ -37,6 +39,8 @@ namespace e_commerce_project.Controllers
         [HttpPost("movetocart")]
         public async Task<IActionResult> MoveToCart(AddCartItemDTO item)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
             var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var cart = await context.AddToCart(item, UserId);
             return Ok(cart);

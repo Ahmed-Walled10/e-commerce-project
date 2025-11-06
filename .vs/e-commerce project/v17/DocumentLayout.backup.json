@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\services\\iproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|c:\\users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{773787A8-9FD8-46A8-92F7-3B2F79CD44A8}|e-commerce project\\e-commerce project.csproj|solutionrelative:e-commerce project\\repository\\sql_products_ repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -68,33 +68,33 @@
               "RelativeDocumentMoniker": "e-commerce project\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "e-commerce project\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAswBcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAADgv18AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-05T22:54:55.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Sql_Products_ Repository.cs",
               "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Products_ Repository.cs",
               "RelativeDocumentMoniker": "e-commerce project\\Repository\\Sql_Products_ Repository.cs",
               "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Repository\\Sql_Products_ Repository.cs",
               "RelativeToolTip": "e-commerce project\\Repository\\Sql_Products_ Repository.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAA6wE8AAABFAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwE8AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-05T22:42:53.737Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "IProducts.cs",
               "DocumentMoniker": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\IProducts.cs",
               "RelativeDocumentMoniker": "e-commerce project\\Services\\IProducts.cs",
               "ToolTip": "C:\\Users\\micro\\source\\repos\\e-commerce project\\e-commerce project\\Services\\IProducts.cs",
               "RelativeToolTip": "e-commerce project\\Services\\IProducts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvxEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-05T22:54:01.6Z",
               "EditorCaption": ""
