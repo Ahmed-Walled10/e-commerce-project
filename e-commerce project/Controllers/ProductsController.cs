@@ -128,7 +128,7 @@ namespace e_commerce_project.Controllers
         {
             try
             {
-                await context.UpdateSku(productId, skuId, UpSku);
+                await context.Update_Sku(productId, skuId, UpSku);
                 return Ok();
             }
             catch (Exception ex)
