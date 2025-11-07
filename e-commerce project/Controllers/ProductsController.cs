@@ -3,6 +3,7 @@ using e_commerce_project.DTOs;
 using e_commerce_project.Modles;
 using e_commerce_project.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace e_commerce_project.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Get_All_Products(string? name, string? description, List<int>? categoryIds, int pagenumber=1, int pagesize=20)
+        public async Task<IActionResult> Get_All_Products(string? name, string? description, List<int>? categoryIds, int pagenumber = 1, int pagesize = 20)
         {
             if (pagesize > maxPageSize)
                 pagesize = maxPageSize;
@@ -62,13 +63,12 @@ namespace e_commerce_project.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create_New_Product(CreateProductDTO product)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
+
             await context.Create_New_Product(product);
             return Ok("Product added successfully!");
         }
@@ -80,7 +80,7 @@ namespace e_commerce_project.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            
+
             try
             {
                 await context.Update_Product_By_Id(Id, UPro);
@@ -160,5 +160,55 @@ namespace e_commerce_project.Controllers
             }
         }
 
+        [HttpPost("categories")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AddCategoryToProduct(int productId, CategoryDTO catDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            try
+            {
+                await context.Add_Category(catDto);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPatch("categories")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UpdateCategory(int catId, JsonPatchDocument<CategoryDTO> catpatch)
+        {
+            if (catpatch == null)
+                return BadRequest();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            try
+            {
+                await context.Update_Category(catId, catpatch);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("categories/{categoryId:int}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete_Category(int categoryId)
+        {
+            try
+            {
+                await context.Delete_Category(categoryId);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

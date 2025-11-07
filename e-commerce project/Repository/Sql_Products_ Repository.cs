@@ -2,6 +2,7 @@
 using e_commerce_project.DTOs;
 using e_commerce_project.Modles;
 using e_commerce_project.Services;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
@@ -77,6 +78,13 @@ namespace e_commerce_project.Repository
 
             return mapper.Map<ProductSkuDTO>(ProSku);
         }
+        public async Task Add_Category(CategoryDTO catdto)
+        {
+            var category = mapper.Map<Categories>(catdto);
+            await context.Categories.AddAsync(category);
+            await context.SaveChangesAsync();
+            return;
+        }
         public async Task Create_New_Product(CreateProductDTO prodto)
         {
             var product = mapper.Map<Products>(prodto);
@@ -96,6 +104,29 @@ namespace e_commerce_project.Repository
 
             var newSku = mapper.Map<Product_skus>(skuDto);
             product.Product_Skus.Add(newSku);
+            await context.SaveChangesAsync();
+            return;
+
+        }
+        public async Task Update_Category(int catId, JsonPatchDocument<CategoryDTO> catpatch)
+        {
+            var cat = await context.Categories.FirstOrDefaultAsync(c => c.Id == catId);
+            if (cat == null)
+                throw new Exception("Category not found");
+
+            var catdto=mapper.Map<CategoryDTO>(cat);
+
+            try
+            {
+                catpatch.ApplyTo(catdto);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            mapper.Map(catdto, cat);
+
             await context.SaveChangesAsync();
             return;
 
@@ -183,6 +214,19 @@ namespace e_commerce_project.Repository
 
 
             context.product_Skus.Remove(sku);
+            await context.SaveChangesAsync();
+            return;
+        }
+        public async Task Delete_Category(int categoryId)
+        {
+            var category = await context
+                .Categories
+                .FirstOrDefaultAsync(c => c.Id == categoryId);
+
+            if (category == null)
+                throw new Exception("Category not found");
+
+            context.Categories.Remove(category);
             await context.SaveChangesAsync();
             return;
         }

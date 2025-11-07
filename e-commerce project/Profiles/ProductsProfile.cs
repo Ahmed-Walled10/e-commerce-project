@@ -16,7 +16,7 @@ namespace e_commerce_project.Services
             src.Product_Skus.Min(s => s.Price):0));
 
             CreateMap<Product_skus, ProductSkuDTO>();
-            CreateMap<Categories, CategoryDTO>();
+            CreateMap<Categories, CategoryDTO>().ReverseMap();
             CreateMap<Products, ProductWithSkusDTO>()
             .ForMember(dest => dest.Skus, opt => opt.MapFrom(src => src.Product_Skus))
             .ForMember(dest => dest.Categories,opt => opt.MapFrom(src => src.Products_Categories.Select(pc=>pc.Category)));
@@ -28,17 +28,21 @@ namespace e_commerce_project.Services
 
             CreateMap<CreateProductDTO, Products>()
                     .ForMember(dest => dest.Product_Skus, opt => opt.MapFrom(src => src.Skus))
-                    .ForMember(dest => dest.Products_Categories, opt => opt.MapFrom(src =>
-                    src.Categories.Select(c => new Products_categories
-                    {
-                        Category = new Categories
-                        {
-                            Name = c.Name,
-                            Description = c.Description
-                        }
-                    })));
+                    .ForMember(dest => dest.Products_Categories, opt => opt.MapFrom
+                    (src => src.CategoriesId.Select(id=>new Products_categories {Category_Id=id })));
+
+            /*.ForMember(dest => dest.Products_Categories, opt => opt.MapFrom(src =>
+            src.Cat .Select(c => new Products_categories
+            {
+                Category = new Categories
+                {
+                    Name = c.Name,
+                    Description = c.Description
+                }
+            })));*/
+
             CreateMap<CreateProductSkuDTO, Product_skus>();
-            CreateMap<CreateProductCategoryDTO, Categories>();
+            //CreateMap<CreateProductCategoryDTO, Categories>();
 
             CreateMap<AddProductSkuDTO, Product_skus>().ReverseMap();
 

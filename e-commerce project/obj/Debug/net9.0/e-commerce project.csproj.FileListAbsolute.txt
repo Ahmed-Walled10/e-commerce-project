@@ -168,3 +168,7 @@ C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\obj\Debug\net9.0\e-commerce project.sourcelink.json
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll

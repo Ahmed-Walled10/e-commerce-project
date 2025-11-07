@@ -153,6 +153,27 @@
   },
   {
     "ContainingType": "e_commerce_project.Controllers.ProductsController",
+    "Method": "Update_Product_By_Id",
+    "RelativePath": "api/v1/Products",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UPro",
+        "Type": "e_commerce_project.DTOs.UpdateProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.ProductsController",
     "Method": "Get_Product_By_Id",
     "RelativePath": "api/v1/Products/{Id}",
     "HttpMethod": "GET",
@@ -162,27 +183,6 @@
       {
         "Name": "Id",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "e_commerce_project.Controllers.ProductsController",
-    "Method": "Update_Product_By_Id",
-    "RelativePath": "api/v1/Products/{Id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "UPro",
-        "Type": "e_commerce_project.DTOs.UpdateProductDTO",
         "IsRequired": true
       }
     ],
@@ -207,7 +207,7 @@
   {
     "ContainingType": "e_commerce_project.Controllers.ProductsController",
     "Method": "GetSkuForProduct",
-    "RelativePath": "api/v1/Products/{productId}/skus/{skuId}",
+    "RelativePath": "api/v1/Products/{productId}/sku/{skuId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -221,6 +221,132 @@
         "Name": "skuId",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.ProductsController",
+    "Method": "AddCategoryToProduct",
+    "RelativePath": "api/v1/Products/categories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "catDto",
+        "Type": "e_commerce_project.DTOs.CategoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.ProductsController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/v1/Products/categories",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "catId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "catpatch",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.ProductsController",
+    "Method": "Delete_Category",
+    "RelativePath": "api/v1/Products/categories/{categoryId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.ProductsController",
+    "Method": "AddSkuToProduct",
+    "RelativePath": "api/v1/Products/sku",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "skuDto",
+        "Type": "e_commerce_project.DTOs.AddProductSkuDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.ProductsController",
+    "Method": "Update_Sku",
+    "RelativePath": "api/v1/Products/sku",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "skuId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpSku",
+        "Type": "e_commerce_project.DTOs.UpdateSkuDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "e_commerce_project.Controllers.ProductsController",
+    "Method": "Delete_Sku",
+    "RelativePath": "api/v1/Products/sku",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "skuId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
