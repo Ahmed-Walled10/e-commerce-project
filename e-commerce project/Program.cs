@@ -15,6 +15,9 @@ builder.Services.AddControllers()
 builder.Services.AddDbContext<sql_e_commerce_DB>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddScoped<IEmailService, SmtpEmailService>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<IProducts, Sql_Products__Repository>();
 builder.Services.AddScoped<ICart, Sql_Cart_Repository>();

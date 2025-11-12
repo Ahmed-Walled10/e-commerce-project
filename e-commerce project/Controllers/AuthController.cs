@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using e_commerce_project.DTOs.User;
 using e_commerce_project.Modles;
+using e_commerce_project.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -19,16 +20,20 @@ namespace e_commerce_project.Controllers
         private readonly SignInManager<Users> signInManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly IMapper mapper;
+        private readonly IEmailService emailService;
 
         public AuthController(UserManager<Users> _userManager,
             SignInManager<Users> _signInManager,
             IMapper _mapper,
-            RoleManager<IdentityRole> _roleManager)
+            RoleManager<IdentityRole> _roleManager,
+            IEmailService _emailService)
         {
             userManager = _userManager;
             signInManager = _signInManager;
             mapper = _mapper;
             roleManager = _roleManager;
+            emailService = _emailService;
+
         }
 
 
@@ -52,6 +57,18 @@ namespace e_commerce_project.Controllers
                 return BadRequest(roleresult.Errors);
 
             await signInManager.SignInAsync(NewUser, isPersistent: false);
+
+            /*var emailSubject = "New User Notification";
+            var emailBody = $@"<html>
+                    <body style='font-family:Arial,sans-serif;'>
+                        <h2>Welcome , {NewUser.First_Name}!</h2>
+                        <p>We're glad to see you.</p>
+                        <p>Best regards,<br/>The E-commerce Team</p>
+                    </body>
+                  </html>";
+
+            await emailService.SendEmailAsync(NewUser.Email, emailSubject, emailBody, true);*/
+
             string massage = $"Welcome aboard, {NewUser.First_Name}!";
             return Ok(massage);
 
@@ -163,7 +180,7 @@ namespace e_commerce_project.Controllers
             public bool RememberMe { get; set; }
         }
         public static class RoleSeeder
-    {
+        {
         public static async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
         {
             string[] roles = { "User", "Admin" };
@@ -177,7 +194,8 @@ namespace e_commerce_project.Controllers
             }
 
         }
-    }
+        
+        }
 
 }
 

@@ -172,3 +172,6 @@ C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\MailKit.dll
+C:\Users\micro\source\repos\e-commerce project\e-commerce project\bin\Debug\net9.0\MimeKit.dll
